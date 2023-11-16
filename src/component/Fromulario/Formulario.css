@@ -1,0 +1,47 @@
+.conte-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.input {
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    border-radius: 25px 0 0  25px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+.input-btn {
+    cursor: pointer;
+    background: rgb(12, 208, 218);
+    border: none;
+    border: 2px solid white;
+    border-radius: 0 25px 25px  0;
+    padding-right: 15px;
+    color: black;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+}
+
+.input-btn:hover {
+    color: rgb(251, 249, 249);
+    background: green;
+}
+
+
+@media only screen and (max-width: 768px ){
+    .input {
+        height: 40px;
+        width: 150px;
+        font-size: 20px;
+        border-radius: 25px 0 0  25px;
+        padding-left: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    
+}

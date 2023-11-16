@@ -1,0 +1,64 @@
+.conte-tarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    width: 480px;
+    padding: 10px;
+    background: rgb(246, 3, 246);
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.tarea-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.tarea-borrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tarea-borrar:hover {
+    color: rgb(4, 4, 4);
+    background: white;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 768px){
+    .tarea {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        width: 210px;
+        padding: 10px;
+        background: rgb(246, 3, 246);
+        border-radius: 25px;
+        font-weight: 700;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        
+    }
+}
+
+
