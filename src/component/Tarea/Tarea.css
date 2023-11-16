@@ -22,11 +22,18 @@
     
 }
 
+.tarea-completada {
+    text-decoration: line-through;
+    color: rgb(4, 4, 4);
+  }
+
 .tarea-texto {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 10px;
+    gap: 10px;
+    color: white;
 }
 
 .tarea-borrar {
@@ -34,6 +41,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: white;
 }
 
 .tarea-borrar:hover {
