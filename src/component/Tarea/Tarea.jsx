@@ -11,7 +11,7 @@ const Tarea = (props) => {
   return (
     <div className="conte-tarea">
       <div className="tarea">
-        <div className="tarea-texto">▶ {props.texto}</div>
+        <div className="tarea-texto">● {props.texto}</div>
         <div className="tarea-borrar" onClick={handleEliminarTarea}>
           <AiOutlineDelete />
         </div>
