@@ -11,7 +11,7 @@ const Tarea = (props) => {
     <div className="conte-tarea">
       <div className={completada ? 'tarea tarea-completada' : 'tarea'}>
         <div className="tarea-texto" onClick={completarTarea}>
-          <BsCheck2 /> {texto}
+          <BsCheck2 /> {texto.length > 30 ? texto.slice(0, 30) + '...' : texto}
         </div>
         <div className="tarea-borrar" onClick={eliminarTarea}>
           <AiOutlineDelete />

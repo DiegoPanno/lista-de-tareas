@@ -35,6 +35,8 @@
     gap: 10px;
     color: white;
     cursor: pointer;
+    word-wrap: break-word;
+    
 }
 
 .tarea-borrar {
