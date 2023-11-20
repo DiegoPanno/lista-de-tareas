@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import Formulario from "../Fromulario/Formulario";
 import Tarea from "../Tarea/Tarea";
+import Alert from 'react-bootstrap/Alert';
+import './ListaDeTarea.css';
 
 const obtenerDatos = () => {
   const datos = localStorage.getItem('keyS');
@@ -15,6 +17,9 @@ const obtenerDatos = () => {
 
 const ListaDeTarea = () => {
   const [tareas, setTareas] = useState(obtenerDatos());
+  const [alert, setAlert] = useState(false);
+
+  const variant = "success";
 
   const agregarTarea = (nuevaTarea) => {
     setTareas([...tareas, nuevaTarea]);
@@ -25,6 +30,7 @@ const ListaDeTarea = () => {
   const eliminarTarea = (id) => {
     const tareaActualizadas = tareas.filter(tarea => tarea.id !== id);
     setTareas(tareaActualizadas);
+    setAlert(false);
     // Actualiza el almacenamiento local
     localStorage.setItem('keyS', JSON.stringify(tareaActualizadas));
   };
@@ -33,10 +39,12 @@ const ListaDeTarea = () => {
     const tareaActualizadas = tareas.map(tarea => {
       if (tarea.id === id) {
         tarea.completada = !tarea.completada;
+        setAlert(true);
       }
       return tarea;
     });
     setTareas(tareaActualizadas);
+    
     // Actualiza el almacenamiento local
     localStorage.setItem('keyS', JSON.stringify(tareaActualizadas));
   };
@@ -60,6 +68,11 @@ const ListaDeTarea = () => {
           />
         )}
       </div>
+      {alert && (
+        <Alert className="alerta" key={variant} variant={variant} onClose={() => setAlert(false)} dismissible>
+          Tarea completada!
+        </Alert>
+      )}
     </>
   );
 };
