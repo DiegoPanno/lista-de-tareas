@@ -17,12 +17,12 @@ const Formulario = (props) => {
   const envios = (e) => {
     e.preventDefault();
 
-    const tareaNueva = {
+    const nuevaTarea = {
       id: generarId(),
       texto: input,
       completada: false,
     };
-    props.onSubmit(tareaNueva);
+    props.onSubmit(nuevaTarea);
     setInput("");
   };
 
